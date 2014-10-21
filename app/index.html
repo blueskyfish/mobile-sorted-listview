@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="de">
+<head>
+	<meta charset="UTF-8">
+	<title>Mobile Sorted ListView</title>
+	<meta name="viewport" content="initial-scale=1,user-scalable=no">
+
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="mobile-web-app-capable" content="yes">
+
+	<link href="assets/css/jquery.mobile.css" rel="stylesheet">
+	<link href="assets/css/jquery-ui.css" rel="stylesheet">
+
+	<script src="assets/js/jquery.js"></script>
+	<script src="assets/js/jquery.mobile.js"></script>
+	<script src="assets/js/jquery-ui.js"></script>
+	<script src="assets/js/jquery.ui.touch-punch.js"></script>
+
+</head>
+<body>
+
+<div data-role="page" id="sortedListView">
+	<div data-role="header" data-position="fixed">
+		<h1>Sorted ListView</h1>
+	</div>
+	<div data-role="content">
+		<ul data-role="listview" data-inset="true" id="listview">
+			<li data-id="1">
+				<a href="#">Auto 1</a>
+			</li>
+			<li data-id="2">
+				<a href="#">Auto 2</a>
+			</li>
+			<li data-id="3">
+				<a href="#">Auto 3</a>
+			</li>
+			<li data-id="4">
+				<a href="#">Auto 4</a>
+			</li>
+		</ul>
+	</div>
+</div>
+
+<script type="application/javascript">
+	$(document).on('pagecreate', function () {
+		$('#listview')
+			.sortable()
+			.disableSelection()
+			.on('sortstop', function (ev, ui) {
+				$('#listview').listview('refresh');
+
+				var sorted = [];
+				$('#listview li').each(function () {
+					var id = $(this).attr('data-id');
+					sorted.push(id);
+				});
+				console.log('sorted: ', sorted);
+			});
+	});
+</script>
+
+</body>
+</html>
