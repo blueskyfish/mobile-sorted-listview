@@ -20,41 +20,99 @@
 </head>
 <body>
 
-<div data-role="page" id="sortedListView">
+<div data-role="page" id="startup">
 	<div data-role="header" data-position="fixed">
 		<h1>Sorted ListView</h1>
+		<a href="#writeComment"
+		   data-rel="popup" data-position-to="window" data-transition="pop"
+		   class="ui-btn ui-btn-right ui-btn-icon-right ui-btn-icon-notext ui-alt-icon ui-nodisc-icon ui-icon-comment ui-btn-inline">Popup</a>
 	</div>
-	<div data-role="content">
+	<div data-role="main" class="ui-content">
 		<ul data-role="listview" data-inset="true" id="listview">
 			<li data-id="1">
-				<a href="#">Auto 1</a>
+				<a href="#auto-1">Auto 1</a>
 			</li>
 			<li data-id="2">
-				<a href="#">Auto 2</a>
+				<a href="#auto-2">Auto 2</a>
 			</li>
 			<li data-id="3">
-				<a href="#">Auto 3</a>
+				<a href="#auto-3">Auto 3</a>
 			</li>
 			<li data-id="4">
-				<a href="#">Auto 4</a>
+				<a href="#auto-4">Auto 4</a>
 			</li>
 		</ul>
+	</div>
+	<div data-role="popup" id="writeComment" data-theme="a" class="ui-corner-all" data-dismissible="false">
+		<div data-role="header">
+			<h1>Write a Comment</h1>
+			<a href="#" data-rel="back" class="ui-btn ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+		</div>
+		<div role="main" class="ui-content">
+			<label for="comment" class="ui-hidden-accessible">Comment:</label>
+			<textarea name="comment" id="comment" row="3"></textarea>
+			<button type="submit" class="ui-btn ui-corner-all ui-shadow ui-btn-b ui-btn-icon-left ui-icon-check">Send</button>
+		</div>
+	</div>
+</div>
+
+<div data-role="page" id="auto-1">
+	<div data-role="header" data-position="fixed">
+		<a href="#" data-rel="back" class="ui-btn ui-btn-left ui-icon-carat-l ui-btn-icon-left ui-btn-inline ui-btn-icon-notext ui-nodisc-icon ui-alt-icon">Zurück</a>
+		<h1>Auto 1</h1>
+	</div>
+	<div role="main" class="ui-content">
+		<h2>Auto 1</h2>
+		<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. </p>
+	</div>
+</div>
+<div data-role="page" id="auto-2">
+	<div data-role="header" data-position="fixed">
+		<a href="#" data-rel="back" class="ui-btn ui-btn-left ui-icon-carat-l ui-btn-icon-left ui-btn-inline ui-btn-icon-notext ui-nodisc-icon ui-alt-icon">Zurück</a>
+		<h1>Auto 2</h1>
+	</div>
+	<div role="main" class="ui-content">
+		<h2>Auto 2</h2>
+		<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. </p>
+	</div>
+</div>
+<div data-role="page" id="auto-3">
+	<div data-role="header" data-position="fixed">
+		<a href="#" data-rel="back" class="ui-btn ui-btn-left ui-icon-carat-l ui-btn-icon-left ui-btn-inline ui-btn-icon-notext ui-nodisc-icon ui-alt-icon">Zurück</a>
+		<h1>Auto 3</h1>
+	</div>
+	<div role="main" class="ui-content">
+		<h2>Auto 3</h2>
+		<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. </p>
+	</div>
+</div>
+<div data-role="page" id="auto-4">
+	<div data-role="header" data-position="fixed">
+		<a href="#" data-rel="back" class="ui-btn ui-btn-left ui-icon-carat-l ui-btn-icon-left ui-btn-inline ui-btn-icon-notext ui-nodisc-icon ui-alt-icon">Zurück</a>
+		<h1>Auto 4</h1>
+	</div>
+	<div role="main" class="ui-content">
+		<h2>Auto 4</h2>
+		<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. </p>
 	</div>
 </div>
 
 <script type="application/javascript">
-	$(document).on('pagecreate', function () {
+	$(document).on('pagecreate', '#startup', function () {
 		$('#listview')
 			.sortable()
 			.disableSelection()
 			.on('sortstop', function (ev, ui) {
-				$('#listview').listview('refresh');
 
 				var sorted = [];
-				$('#listview li').each(function () {
-					var id = $(this).attr('data-id');
-					sorted.push(id);
-				});
+
+				$('#listview').listview('refresh')
+					.find('li').each(function () {
+
+						var id = $(this).attr('data-id');
+						sorted.push(id);
+					});
+
 				console.log('sorted: ', sorted);
 			});
 	});
