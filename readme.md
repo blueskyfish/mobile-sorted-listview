@@ -1,7 +1,7 @@
 
 # Mobile Sorted ListView
 
-
+![alt text](https://raw.githubusercontent.com/mulder3/mobile-sorted-listview/master/reorder-listitem.jpg)
 
 	$ npm install
 	$ grunt serve
