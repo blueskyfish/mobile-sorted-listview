@@ -12,22 +12,14 @@ module.exports = function(grunt) {
 					keepalive: true
 				}
 			}
-		},
-
-		watch: {
-			options: {
-				reload: true,
-				atBegin: true
-			},
-			files: ['app/**/*'],
-			tasks: []
 		}
 
 	});
 
 	grunt.loadNpmTasks('grunt-contrib-connect');
-	grunt.loadNpmTasks('grunt-contrib-watch');
 
-	grunt.registerTask('serve', ['connect', 'watch']);
+	grunt.registerTask('serve', ['connect']);
+
+	grunt.registerTask('default', ['serve']);
 
 };
