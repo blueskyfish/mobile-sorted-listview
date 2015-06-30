@@ -1,14 +1,16 @@
 {
 	"name": "mobile-sorted-listview",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"author": "BlueSkyFish <blueskyfish@blueskyfish.de>",
-	"main": "grunt serve",
+	"stripts": {
+		"start": "grunt serve"
+	},
 	"devDependencies": {
-		"grunt": "~0.4.5",
-		"grunt-contrib-connect": "~0.8.0"
+		"grunt": "^0.4.5",
+		"grunt-contrib-connect": "^0.8.0"
 	},
 	"repository": {
     "type": "git",
-    "https://github.com/blueskyfish/mobile-sorted-listview.git"
+    "url": "https://github.com/blueskyfish/mobile-sorted-listview.git"
   }
 }

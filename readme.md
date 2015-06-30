@@ -3,14 +3,16 @@
 
 ![alt text](https://raw.githubusercontent.com/mulder3/mobile-sorted-listview/master/reorder-listitem.jpg)
 
-	$ npm install
-	$ grunt serve
+## Setup
+
+		$ npm install
+		$ grunt serve
 
 Starts the browser and go to `http://localhost:12001/`.
 
 Better: use an android or ios device.
 
-## Version
+## Components Version
 
 * [jQuery JavaScript Library v2.1.4](http://jquery.com)
 * [jQuery Mobile 1.4.5](http://jquerymobile.com)
@@ -19,7 +21,9 @@ Better: use an android or ios device.
 
 ## Copyright
 
-	Copyright (c) 2014 BlueSkyFish
+	The MIT License
+
+	Copyright (c) 2015 BlueSkyFish
 
 	Permission is hereby granted, free of charge, to any person obtaining a copy of
 	this software and associated documentation files (the "Software"), to deal in the
