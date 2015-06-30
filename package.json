@@ -1,7 +1,7 @@
 {
 	"name": "mobile-sorted-listview",
 	"version": "0.0.2",
-	"author": "BlueSkyFish <blueskyfish@blueskyfish.de>",
+	"author": "BlueSkyFish <blueskyfish@kirchnerei.de>",
 	"stripts": {
 		"start": "grunt serve"
 	},
